@@ -1,0 +1,31 @@
+{{#each this}}
+<li class="concert-card" data-id="{{id}}">
+    <img
+        class="card__img"
+        src="{{image}}"
+        alt="{{name}}"
+    >
+
+    <svg class="card__svg" width="153" height="143">
+        <use href="/symbols.svg#decor-line"></use>
+    </svg>
+
+    <h2 class="card__name">
+        {{name}}
+    </h2>
+
+    <p class="card__date">
+        {{date}}
+    </p>
+
+    <div class="card__place">
+        <svg class="card__svg-secondary" width="7" height="10">
+            <use href="/symbols.svg#place-marker"></use>
+        </svg>
+
+        <p class="card__place-text">
+            {{city}}, {{country}}
+        </p>
+    </div>
+</li>
+{{/each}}

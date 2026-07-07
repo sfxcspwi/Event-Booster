@@ -1,0 +1,430 @@
+@import "../utils/variables";
+
+.concert-card
+{
+    width: 194px;
+    height: 312px;
+    position: relative;
+}
+
+.card
+{
+    &__svg
+    {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+    &__img
+    {
+        width: 180px;
+        height: 227px;
+        padding: 13px 0px 5px 0px;
+        position: relative;
+        z-index: 2;
+        border-radius: 50px 0px ;
+    }
+
+    &__name
+    {
+        font-family: "Montserrat";
+        font-weight: 700;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: $accent;
+        margin: 0px;
+    }
+
+    &__date
+    {
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: $text-primary;
+        margin: 5px 0px;
+    }
+
+    &__place
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+    }
+
+    &__place-text
+    {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 14px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: $text-primary;
+        margin: 0px;
+    }  
+
+}
+
+
+.main__list
+{
+    margin: 0px;
+    display: flex;
+    gap: 56px;
+    flex-wrap: wrap;
+}
+
+.main__pages
+{
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.page__btn
+{
+    font-family:    "Montserrat";
+    font-weight: 400;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: $text-primary;
+    background-color: transparent;
+    border: none;
+}
+
+.active
+{
+    border: 1px solid $accent;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px 0px;
+}
+ 
+.page__dots
+{
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-top: 10px;
+    color: $text-primary;
+}
+
+
+.modal
+{
+    width: 930px;
+    height: 1023px;
+    position: absolute;
+    border-radius: 300px 0px 300px 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-position: right;
+    z-index: 4;
+    animation-name: modal-open;    
+    animation-duration: 0.5s;    
+    animation-timing-function: ease-out;    
+    animation-fill-mode: both;
+    background-color: #FFF2FD;
+
+
+    &__btn-close
+    {
+        background-color: transparent;
+        border: none;
+        color: #4C00FE;
+        font-size: 25px;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+
+    &__secondary-img
+    {
+        width: 132px;
+        height: 132px;
+        border-radius: 66px;
+        margin: 62px auto 41px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__img
+    {
+        width: 360px;
+        height: 641px;
+    }
+
+    &__wrap
+    {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__title
+    {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 24px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: $accent;
+    }
+
+    &__info
+    {
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-size: 18px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: $text-dark;
+        max-width: 450px;
+        overflow: hidden;
+        max-height: 70px;
+    }
+
+    &__btn
+    {
+        font-family: "Montserrat";
+        font-weight: 500;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: $text-primary;
+        border: 0px;
+        background-color: #4C00FE;
+        padding: 10px 19px;
+        border-radius: 5px;
+    }
+
+    &__btn-more
+    {
+        font-family: "Montserrat";
+        font-weight: 500;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+        background-color: transparent;
+        padding: 10px 15px;
+        border-color: #4C00FE;
+        color: #4C00FE;
+        border-radius: 5px;
+        margin: 55px auto 0px auto;
+        display: flex;
+    }
+}
+
+.back-drop
+{
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+}
+
+@keyframes modal-open 
+{
+    from {
+      transform: translate(-50%, 100%); 
+    }
+    to {
+      transform: translate(-50%, -50%);
+    }
+}
+
+.is-hidden
+{
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+@media (min-width:768px) and (max-width: 1200px)
+{ 
+
+    .main__list
+    {
+        gap: 13px;
+    }
+    
+    .modal
+    {
+        width: 595px;
+        height: 831px;  
+
+        &__img
+        {
+            width: 233px;
+            height: 466px;
+        }
+
+        &__secondary-img
+        {
+            width: 70px;
+            height: 70px;
+            border-radius: 35px;
+            margin: 28px auto 43px auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        &__info
+        {
+            max-width: 265px;
+            margin: 5px 0px;
+        }
+
+        &__title
+        {
+            margin: 0px;
+        }
+
+        &__list
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 10px;
+        }
+
+        &__btn
+        {
+            margin: 10px 0px 20px 0px;
+        }
+
+        
+        &__wrap
+        {
+            margin-top: 110px;
+        }
+    }
+
+} 
+
+@media (min-width:320px) and (max-width: 768px)
+{ 
+
+    .concert-card
+    {
+        width: 138px;
+        height: 231px;
+        position: relative;
+        margin-bottom: 33px;
+    }
+
+    .main__list
+    {
+        gap: 4px;
+    }
+
+    .card
+    {
+        &__img
+        {
+            width: 128px;
+            height: 161px;
+        }
+
+        &__name
+        {
+            font-size: 14px;
+        }
+
+        &__date
+        {
+            font-size: 14px;
+        }
+
+        &__place-text
+        {
+            font-size: 12px;
+        }
+
+        &__svg
+        {
+            width: 109px;
+            height: 101px;
+        }
+    }
+
+
+
+    .modal
+    {
+        width: 272px;
+        height: 915px;  
+        border-radius: 150px 0px 150px 0px;
+
+        &__img
+        {
+            display: none;
+            width: 102px;
+            height: 102px;
+            border-radius: 51px;
+        }
+
+        &__list
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 10px;
+            align-items: center;
+        }
+
+        &__title
+        {
+            text-align: center;
+            margin: 0px 0px 5px 0px;
+        }
+
+        &__info
+        {
+            text-align: center;
+            max-width: 243px;
+            margin: 0px;
+        }
+
+        &__btn
+        {
+            margin: 10px 0px 20px 0px;
+        }
+
+        &__btn-more
+        {
+            margin: 25px auto 0px auto;
+            padding: 10px 3px;
+        }
+    }
+
+
+} 

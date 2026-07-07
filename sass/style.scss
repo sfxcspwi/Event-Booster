@@ -1,0 +1,52 @@
+@import "./components/footer";
+@import "./components/header";
+@import "./components/main";
+@import "./utils/variables";
+
+.container
+{
+    max-width: 946px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+}
+
+ul
+{
+    padding: 0px;
+    list-style-type: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.main__bg
+{
+    background-image: url(/src/img/main__bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width:768px) and (max-width: 1200px)
+{ 
+
+    .container
+    {
+        max-width: 610px;
+    }
+    
+} 
+
+@media (min-width:320px) and (max-width: 768px)
+{ 
+
+    .container
+    {
+        max-width: 280px;
+    }
+    
+} 

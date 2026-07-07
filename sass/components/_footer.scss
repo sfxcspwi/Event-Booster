@@ -1,0 +1,26 @@
+@import "../utils/variables";
+
+.footer__text
+{
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #939393;
+    padding: 40px 0px 20px 0px;
+    margin: 0px;
+}
+
+@media (min-width:320px) and (max-width: 768px)
+{ 
+
+    .footer__text
+    {
+        width: 252px;
+        font-size: 14px;
+    }
+
+} 
